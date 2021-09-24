@@ -51,7 +51,7 @@ const Page = () => {
 					value={word} onChange={e=>setWord(e.target.value)}/>
 				</SearchArea>
 
-				<HistoryButton>
+				<HistoryButton title="Last Searches">
 					<i className="fas fa-history" onClick={handleClickButton}></i>
 				</HistoryButton>
 
