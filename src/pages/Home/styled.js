@@ -25,7 +25,7 @@ export const CardArea = styled.div`
 	margin-top: 20px;
 	padding: 10px;
 	border-radius: 5px;
-	box-shadow: 0px 0px 3px #ddd;
+	box-shadow: ${props=>props.showBoxShadow ? '0px 0px 3px #ddd' : ''};
 	@media (max-width: 600px) {
 		width: 100%;
 	}
@@ -36,7 +36,9 @@ export const HistoryButton = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	font-size: 2rem;
-	cursor: pointer;
+	i {
+		cursor: pointer;
+	}
 	@media (max-width: 600px) {
 		width: 100%;
 		padding: 0 10px;
@@ -48,9 +50,20 @@ export const HistoryArea = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	box-shadow: 0px 0px 3px #ddd;
+	box-shadow: ${props=>props.showBoxShadow ? '0px 0px 3px #ddd' : ''};
 	margin-top: 20px;
 	@media (max-width: 600px) {
 		width: 100%;
+	}
+`;
+export const ErrorMessage = styled.div`
+	width: 600px;
+	margin:15px 0;
+	background-color:#ffcaca;
+	color:#000;
+	border:2px solid #ff0000;
+	padding:10px;
+	@media (max-width: 600px) {
+		width: 95%;
 	}
 `;
